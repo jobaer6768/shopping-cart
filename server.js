@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: process.env.BASE_URL,
+    origin: ['https://easy-shopping-liart.vercel.app', 'http://localhost:5173'] ,
     credentials: true,
     methods: "PUT,POST,GET,DELETE,PATCH,HEAD",
   })
