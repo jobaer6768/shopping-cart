@@ -11,11 +11,15 @@ const app = express();
 
 app.use(
   cors({
-    origin: ['https://easy-shopping-liart.vercel.app', 'http://localhost:5173'] ,
+    origin: [
+      'https://easy-shopping-liart.vercel.app', 
+      'http://localhost:5173'
+    ],
     credentials: true,
-    methods: "PUT,POST,GET,DELETE,PATCH,HEAD",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   })
 );
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
